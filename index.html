@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CKD Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chronic Kidney Disease Detection</h1>
+    <form id="ckdForm">
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+
+      <label for="bp">Blood Pressure (mm Hg):</label>
+      <input type="number" id="bp" required>
+
+      <label for="al">Albumin (g/dL):</label>
+      <input type="number" id="al" required step="0.1">
+
+      <label for="su">Sugar (mg/dL):</label>
+      <input type="number" id="su" required step="0.1">
+
+      <label for="hemo">Hemoglobin (g/dL):</label>
+      <input type="number" id="hemo" required step="0.1">
+
+      <button type="submit">Check CKD Risk</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
