@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CKD Detection</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Diagnostic Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Chronic Kidney Disease Detection</h1>
-    <form id="ckdForm">
-      <label for="age">Age:</label>
-      <input type="number" id="age" required>
-
-      <label for="bp">Blood Pressure (mm Hg):</label>
-      <input type="number" id="bp" required>
-
-      <label for="al">Albumin (g/dL):</label>
-      <input type="number" id="al" required step="0.1">
-
-      <label for="su">Sugar (mg/dL):</label>
-      <input type="number" id="su" required step="0.1">
-
-      <label for="hemo">Hemoglobin (g/dL):</label>
-      <input type="number" id="hemo" required step="0.1">
-
-      <button type="submit">Check CKD Risk</button>
-    </form>
-    <div id="result"></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>CKD Diagnostic Tool</h1>
+        <form id="diagnostic-form">
+            <div class="input-group">
+                <i class="fas fa-user icon"></i>
+                <input type="number" id="age" placeholder="Age" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-heartbeat icon"></i>
+                <input type="number" id="bp" placeholder="Blood Pressure (mm Hg)" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-flask icon"></i>
+                <input type="number" id="albumin" placeholder="Albumin (g/dL)" step="0.1" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-tint icon"></i>
+                <input type="number" id="sugar" placeholder="Sugar (mg/dL)" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-medkit icon"></i>
+                <input type="number" id="hemoglobin" placeholder="Hemoglobin (g/dL)" step="0.1" required>
+            </div>
+            <button type="submit">Diagnose</button>
+        </form>
+        <div id="result-container" class="result-container hidden">
+            <h2 id="diagnosis-title"></h2>
+            <ul id="diagnosis-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
